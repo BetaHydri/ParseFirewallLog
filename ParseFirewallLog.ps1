@@ -1,3 +1,45 @@
+
+<#PSScriptInfo
+
+.VERSION 1.0.0
+
+.GUID 3bc11438-f787-4e45-a3f9-bc322d1e8d0f
+
+.AUTHOR Jan Tiedemann
+
+.COMPANYNAME Jan Tiedemann
+
+.COPYRIGHT 2021
+
+.TAGS Firewall, Log, 'Windows Firewall', Parser
+
+.LICENSEURI 
+
+.PROJECTURI 
+
+.ICONURI 
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+
+
+#>
+
+<# 
+
+.DESCRIPTION 
+ Parses the Windows Firewall logfile to be able to filter for specific attribuites 
+
+#> 
+
+Param()
+
+
 #Firewall Log Parsing with RegEx
 Function Get-WindowsFirewallLog {
 
