@@ -37,9 +37,6 @@
 
 #> 
 
-Param()
-
-
 #Firewall Log Parsing with RegEx
 Function Get-WindowsFirewallLog {
 
