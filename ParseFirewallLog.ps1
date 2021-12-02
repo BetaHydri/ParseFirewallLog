@@ -20,11 +20,6 @@ Function Get-WindowsFirewallLog {
     }
     return $myArray
 }
-$prop = @("Date", "Action", "Protocol", "Source", "SrcPort", "Destination", "DstPort", "Direction")
 
 #Samples
-#Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property Date, Time, Action, Protocol, Source, SrcPort, Destination, DstPort, Size, Direction | Where-Object { $_.Protocol -eq "UDP" -and $_.Action -eq "DROP" } | Format-Table -AutoSize
-#Get-WindowsFirewallLog .\pfirewall.log | Select-Object -Property $prop | Where-Object { $_.Protocol -eq 'UDP' -or $_.Protocol -eq 'TCP' } | Group-Object -Property Action, Direction |Where-Object Name -eq 'DROP, RECEIVE' | Select-Object -ExpandProperty Group| Get-Unique -AsString |Format-Table -AutoSize
-#Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property $prop | Group-Object -Property Action, Direction | Where-Object { $_.Name -eq 'DROP, RECEIVE' -or $_.Name -eq 'ALLOW, SEND' } |  Format-Table -AutoSize
-Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property $prop | Group-Object -Property Action, Direction | Format-Table -AutoSize
-#Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property $prop | Group-Object -Property $prop | Format-Table -AutoSize
+#Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property Date, Time, Action, Protocol, Source, SrcPort, Destination, DstPort, Size, Direction | Format-Table -AutoSize
