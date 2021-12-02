@@ -39,7 +39,25 @@
 
 #Firewall Log Parsing with RegEx
 Function Get-WindowsFirewallLog {
+    <#
+    .SYNOPSIS
+    Reads the pfirewall.log file
 
+    .DESCRIPTION
+    Parses the Windows Firewall logfile to be able to filter for specific firewall log entries
+
+    .EXAMPLE
+    Get-WindowsFirewallLog -LogFile .\pfirewall.log | Where-Object { $_.Protocol -eq "TCP" -and $_.Action -eq "DROP" } | Format-Table -AutoSize
+
+    .EXAMPLE
+    Get-WindowsFirewallLog | Select-Object -Property Action, Protocol, Source, SrcPort, Destination, DstPort, Size, Direction | Group-Object -Property Action, Direction | Format-Table -Autosize
+
+    .INPUTS
+    -LogFile        [<windows firewall logfile>]
+
+    .OUTPUTS
+    PsCustomObject with selected Properties
+ #>
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0)]
