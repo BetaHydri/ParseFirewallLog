@@ -8,7 +8,7 @@
 # Samples
 
 Sample1:
-Get-WindowsFirewallLog  Select-Object -Property Date, Time, Action, Protocol, Source, SrcPort, Destination, DstPort, Size, Direction | Where-Object { $_.Protocol -eq "UDP" -and $_.Action -eq "DROP" } | Format-Table -AutoSize
+Get-WindowsFirewallLog | Select-Object -Property Date, Time, Action, Protocol, Source, SrcPort, Destination, DstPort, Size, Direction | Where-Object { $_.Protocol -eq "UDP" -and $_.Action -eq "DROP" } | Format-Table -AutoSize
 
 Other samples:
 $prop = @("Date", "Action", "Protocol", "Source", "SrcPort", "Destination", "DstPort", "Direction")
