@@ -25,8 +25,8 @@ Get-WindowsFirewallLog -LogFile .\pfirewall.log | Select-Object -Property $prop 
 
 ## Output
 
-Date      | Time  | Action |Protocol |Source      |SrcPort|Destination |DstPort|Size|Direction
-:---------|-------|:-------|:--------|:-----------|:-----|:------------|:------|:---|:---------
+Date      | Time     |Action|Protocol| Source           |SrcPort| Destination      |DstPort |Size   |Direction
+:---------|----------|:-----|:-------|:-----------------|:------|:-----------------|:-------|:------|:---------
 2021-06-22| 12:19:41 | DROP | UDP    |   192.168.178.25 | 5353  |   224.0.0.251    |  5353  |   73  |  RECEIVE
 2021-06-22| 12:19:41 | DROP | UDP    |   192.168.178.42 | 5353  |   224.0.0.251    |  5353  |   225 |  RECEIVE
 2021-06-22| 12:20:29 | DROP | UDP    |   192.168.178.31 | 5353  |   224.0.0.251    |  5353  |   77  |  RECEIVE
