@@ -1,4 +1,4 @@
-# ParseFirewallLog
+# Parse Windows Firewall Log
 
 ### CMDLet: Get-WindowsFirewallLog
 
