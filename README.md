@@ -16,7 +16,7 @@ A PowerShell function that parses **Windows Firewall log files** into structured
 ## Prerequisites
 
 - Windows PowerShell 5.1 or PowerShell 7+
-- Windows Firewall logging enabled (see [Microsoft Docs](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/configure-logging))
+- Windows Firewall logging enabled — see the [Enable Firewall Logging Guide](doc/Enable-FirewallLogging.md) for all methods, best practices, and troubleshooting
 
 ## Installation
 
