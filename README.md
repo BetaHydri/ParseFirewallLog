@@ -78,6 +78,8 @@ Get-WindowsFirewallLog -LogFile .\pfirewall.log |
 
 ## Sample Output
 
+![Sample firewall log output](doc/sampleFwLogOut.png)
+
 | Date       | Time     | Action | Protocol | Source          | SrcPort | Destination     | DstPort | Size | Direction |
 |:-----------|:---------|:-------|:---------|:----------------|:--------|:----------------|:--------|:-----|:----------|
 | 2021-06-22 | 12:19:41 | DROP   | UDP      | 192.168.178.25  | 5353    | 224.0.0.251     | 5353    | 73   | RECEIVE   |
