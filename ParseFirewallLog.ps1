@@ -31,7 +31,7 @@
 #>
 
 #Firewall Log Parsing with RegEx
-Function Get-WindowsFirewallLog {
+function Get-WindowsFirewallLog {
     <#
     .SYNOPSIS
     Reads the pfirewall.log file
@@ -52,7 +52,7 @@ Function Get-WindowsFirewallLog {
     PsCustomObject with selected Properties
  #>
     [CmdletBinding()]
-    Param (
+    param (
         [Parameter(Position = 0)]
         [ValidateNotNullOrEmpty()]
         [String[]]
